@@ -1,0 +1,10 @@
+E:\Projects\GiftCardManager\bin\Release\Card Manager.exe.config
+E:\Projects\GiftCardManager\bin\Release\Card Manager.exe
+E:\Projects\GiftCardManager\bin\Release\Card Manager.pdb
+E:\Projects\GiftCardManager\obj\Release\Card Manager.csproj.AssemblyReference.cache
+E:\Projects\GiftCardManager\obj\Release\Card_Manager.GiftCardManager.resources
+E:\Projects\GiftCardManager\obj\Release\Card_Manager.Properties.Resources.resources
+E:\Projects\GiftCardManager\obj\Release\Card Manager.csproj.GenerateResource.cache
+E:\Projects\GiftCardManager\obj\Release\Card Manager.csproj.CoreCompileInputs.cache
+E:\Projects\GiftCardManager\obj\Release\Card Manager.exe
+E:\Projects\GiftCardManager\obj\Release\Card Manager.pdb

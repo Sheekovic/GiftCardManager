@@ -1,0 +1,20 @@
+E:\Projects\Card Manager\bin\Debug\Card Manager.exe.config
+E:\Projects\Card Manager\bin\Debug\Card Manager.exe
+E:\Projects\Card Manager\bin\Debug\Card Manager.pdb
+E:\Projects\Card Manager\obj\Debug\Card Manager.csproj.AssemblyReference.cache
+E:\Projects\Card Manager\obj\Debug\Card_Manager.GiftCardManager.resources
+E:\Projects\Card Manager\obj\Debug\Card_Manager.Properties.Resources.resources
+E:\Projects\Card Manager\obj\Debug\Card Manager.csproj.GenerateResource.cache
+E:\Projects\Card Manager\obj\Debug\Card Manager.csproj.CoreCompileInputs.cache
+E:\Projects\Card Manager\obj\Debug\Card Manager.exe
+E:\Projects\Card Manager\obj\Debug\Card Manager.pdb
+E:\Projects\GiftCardManager\obj\Debug\Card Manager.csproj.AssemblyReference.cache
+E:\Projects\GiftCardManager\obj\Debug\Card_Manager.GiftCardManager.resources
+E:\Projects\GiftCardManager\obj\Debug\Card Manager.csproj.GenerateResource.cache
+E:\Projects\GiftCardManager\obj\Debug\Card Manager.exe
+E:\Projects\GiftCardManager\obj\Debug\Card Manager.pdb
+E:\Projects\GiftCardManager\obj\Debug\Card_Manager.Properties.Resources.resources
+E:\Projects\GiftCardManager\obj\Debug\Card Manager.csproj.CoreCompileInputs.cache
+E:\Projects\GiftCardManager\bin\Debug\Card Manager.exe.config
+E:\Projects\GiftCardManager\bin\Debug\Card Manager.exe
+E:\Projects\GiftCardManager\bin\Debug\Card Manager.pdb
