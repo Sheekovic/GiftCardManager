@@ -12,7 +12,7 @@ namespace Card_Manager
     public partial class UpdateForm : Form
     {
         private const string GitHubApiUrl = "https://api.github.com/repos/Sheekovic/GiftCardManager/releases/latest";
-        private const string CurrentVersion = "v3.0.1"; // Your app version
+        private const string CurrentVersion = "v3.0.2"; // Your app version
         private string downloadUrl = "";
 
         public UpdateForm()
@@ -100,54 +100,53 @@ namespace Card_Manager
             progressBar.Visible = true;
             lblStatus.Text = "Downloading update...";
 
-            string tempFilePath = Path.Combine(Path.GetTempPath(), "update.zip");
-            string mainAppPath = Directory.GetCurrentDirectory();
+            string appFolder = Directory.GetCurrentDirectory();
+            string zipFilePath = Path.Combine(appFolder, "update_" + DateTime.Now.Ticks + ".zip");
+            string batchFilePath = Path.Combine(appFolder, "updater.bat");
 
             try
             {
-                // Download the update
+                // Download the update zip into the app folder
                 using HttpClient client = new();
                 var data = await client.GetByteArrayAsync(downloadUrl);
-                await File.WriteAllBytesAsync(tempFilePath, data);
+                await File.WriteAllBytesAsync(zipFilePath, data);
 
-                lblStatus.Text = "Extracting update...";
-                await Task.Delay(1000);
+                // Create updater batch file
+                File.WriteAllText(batchFilePath, $@"
+@echo off
+setlocal
+cd /d ""{appFolder}""
 
-                // Extract to a temp folder first
-                string extractPath = Path.Combine(Path.GetTempPath(), "UpdateTemp");
-                if (Directory.Exists(extractPath))
-                    Directory.Delete(extractPath, true);
+:: Wait for the main app to close
+timeout /t 2 /nobreak >nul
 
-                Directory.CreateDirectory(extractPath);
-                ZipFile.ExtractToDirectory(tempFilePath, extractPath, true);
+:: Find the latest zip file in the folder
+for /f ""delims="" %%F in ('dir /b /o-d *.zip') do set ""updateZip=%%F"" & goto :found
+:found
 
-                lblStatus.Text = "Applying update...";
-                await Task.Delay(1000);
+:: Ensure an update zip was found
+if not defined updateZip exit
 
-                // Close the main application before replacing files
-                Process[] processes = Process.GetProcessesByName("GCM");
-                foreach (var process in processes)
+:: Extract and overwrite files
+powershell -Command ""Expand-Archive -Path '%updateZip%' -DestinationPath '{appFolder}' -Force""
+
+:: Delete update files
+del ""%updateZip%""
+del ""{batchFilePath}""
+
+:: Restart the application
+start """" ""{Path.Combine(appFolder, "GCM.exe")}""
+exit
+                ");
+
+                // Run the batch file and exit the app
+                Process.Start(new ProcessStartInfo
                 {
-                    process.Kill();
-                    process.WaitForExit();
-                }
+                    FileName = batchFilePath,
+                    UseShellExecute = true,
+                    CreateNoWindow = true
+                });
 
-                // Copy new files over the existing ones
-                foreach (string newPath in Directory.GetFiles(extractPath, "*.*", SearchOption.AllDirectories))
-                {
-                    string destPath = Path.Combine(mainAppPath, Path.GetFileName(newPath));
-                    File.Copy(newPath, destPath, true);
-                }
-
-                // Cleanup: Delete temp files
-                Directory.Delete(extractPath, true);
-                File.Delete(tempFilePath);
-
-                lblStatus.Text = "Update installed. Restarting...";
-                await Task.Delay(2000);
-
-                // Restart the main app
-                Process.Start(Path.Combine(mainAppPath, "GCM.exe"));
                 Application.Exit();
             }
             catch (Exception ex)

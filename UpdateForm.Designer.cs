@@ -18,6 +18,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateForm));
             lblStatus = new System.Windows.Forms.Label();
             btnUpdate = new System.Windows.Forms.Button();
             progressBar = new System.Windows.Forms.ProgressBar();
@@ -91,6 +92,7 @@
             Controls.Add(tableLayoutPanel1);
             Font = new System.Drawing.Font("Lucida Handwriting", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "UpdateForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "GCM UPDATER";
