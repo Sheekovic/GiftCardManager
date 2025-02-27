@@ -6,14 +6,13 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Compression;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Card_Manager
 {
     public partial class UpdateForm : Form
     {
         private const string GitHubApiUrl = "https://api.github.com/repos/Sheekovic/GiftCardManager/releases/latest";
-        private const string CurrentVersion = "v3.0.0"; // Your app version
+        private const string CurrentVersion = "v3.0.1"; // Your app version
         private string downloadUrl = "";
 
         public UpdateForm()
@@ -102,7 +101,6 @@ namespace Card_Manager
             lblStatus.Text = "Downloading update...";
 
             string tempFilePath = Path.Combine(Path.GetTempPath(), "update.zip");
-            string extractPath = Path.Combine(Path.GetTempPath(), "UpdateTemp");
             string mainAppPath = Directory.GetCurrentDirectory();
 
             try
@@ -115,7 +113,8 @@ namespace Card_Manager
                 lblStatus.Text = "Extracting update...";
                 await Task.Delay(1000);
 
-                // Ensure temp folder is empty
+                // Extract to a temp folder first
+                string extractPath = Path.Combine(Path.GetTempPath(), "UpdateTemp");
                 if (Directory.Exists(extractPath))
                     Directory.Delete(extractPath, true);
 
@@ -125,25 +124,30 @@ namespace Card_Manager
                 lblStatus.Text = "Applying update...";
                 await Task.Delay(1000);
 
-                // Start a process to replace files and restart the app
-                string updaterScript = Path.Combine(extractPath, "updater.bat");
-                File.WriteAllText(updaterScript, $@"
-        @echo off
-        timeout /t 2 /nobreak >nul
-        xcopy /s /y ""{extractPath}\*"" ""{mainAppPath}\""
-        rd /s /q ""{extractPath}""
-        del ""{tempFilePath}""
-        start """" ""{Path.Combine(mainAppPath, "GCM.exe")}""
-        exit
-        ");
-
-                Process.Start(new ProcessStartInfo
+                // Close the main application before replacing files
+                Process[] processes = Process.GetProcessesByName("GCM");
+                foreach (var process in processes)
                 {
-                    FileName = updaterScript,
-                    UseShellExecute = true,
-                    CreateNoWindow = true
-                });
+                    process.Kill();
+                    process.WaitForExit();
+                }
 
+                // Copy new files over the existing ones
+                foreach (string newPath in Directory.GetFiles(extractPath, "*.*", SearchOption.AllDirectories))
+                {
+                    string destPath = Path.Combine(mainAppPath, Path.GetFileName(newPath));
+                    File.Copy(newPath, destPath, true);
+                }
+
+                // Cleanup: Delete temp files
+                Directory.Delete(extractPath, true);
+                File.Delete(tempFilePath);
+
+                lblStatus.Text = "Update installed. Restarting...";
+                await Task.Delay(2000);
+
+                // Restart the main app
+                Process.Start(Path.Combine(mainAppPath, "GCM.exe"));
                 Application.Exit();
             }
             catch (Exception ex)
@@ -155,7 +159,8 @@ namespace Card_Manager
         private void LaunchMainApp()
         {
             this.Hide();
-            Application.Run(new GiftCardManager());
+            var mainForm = new GiftCardManager();
+            mainForm.Show();
         }
     }
 }
