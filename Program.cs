@@ -12,7 +12,7 @@ namespace Card_Manager
     internal static class Program
     {
         private const string GitHubApiUrl = "https://api.github.com/repos/Sheekovic/GiftCardManager/releases/latest";
-        private const string CurrentVersion = "v2.0.0"; // Replace with your app version
+        private const string CurrentVersion = "v3.0.0"; // Replace with your app version
 
         [STAThread]
         static async Task Main()
