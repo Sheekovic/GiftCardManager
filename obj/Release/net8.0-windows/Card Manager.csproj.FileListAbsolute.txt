@@ -1,0 +1,18 @@
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card_Manager.GiftCardManager.resources
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card_Manager.Properties.Resources.resources
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card Manager.csproj.GenerateResource.cache
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card Manager.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card Manager.csproj.CoreCompileInputs.cache
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card Manager.sourcelink.json
+E:\Projects\GiftCardManager\bin\Release\net8.0-windows\Card Manager.exe
+E:\Projects\GiftCardManager\bin\Release\net8.0-windows\Card Manager.dll.config
+E:\Projects\GiftCardManager\bin\Release\net8.0-windows\Card Manager.deps.json
+E:\Projects\GiftCardManager\bin\Release\net8.0-windows\Card Manager.runtimeconfig.json
+E:\Projects\GiftCardManager\bin\Release\net8.0-windows\Card Manager.dll
+E:\Projects\GiftCardManager\bin\Release\net8.0-windows\Card Manager.pdb
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card Manager.dll
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\refint\Card Manager.dll
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card Manager.pdb
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card Manager.genruntimeconfig.cache
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\ref\Card Manager.dll
+E:\Projects\GiftCardManager\obj\Release\net8.0-windows\Card_Manager.UpdateForm.resources

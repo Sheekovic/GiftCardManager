@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card Manager", "Card Manager.csproj", "{2D7B20F6-368D-4A48-BA89-F134854A9CD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCM", "GCM.csproj", "{2D7B20F6-368D-4A48-BA89-F134854A9CD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

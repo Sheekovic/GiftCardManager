@@ -1,0 +1,7 @@
+E:\Projects\GiftCardManager\obj\Release\net472\Card Manager.csproj.AssemblyReference.cache
+E:\Projects\GiftCardManager\obj\Release\net472\Card_Manager.Form1.resources
+E:\Projects\GiftCardManager\obj\Release\net472\Card_Manager.Properties.Resources.resources
+E:\Projects\GiftCardManager\obj\Release\net472\Card Manager.csproj.GenerateResource.cache
+E:\Projects\GiftCardManager\obj\Release\net472\Card Manager.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\GiftCardManager\obj\Release\net472\Card Manager.csproj.CoreCompileInputs.cache
+E:\Projects\GiftCardManager\obj\Release\net472\Card Manager.sourcelink.json
