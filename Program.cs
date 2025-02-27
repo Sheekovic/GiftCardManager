@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
-namespace GiftCardManager
+namespace Card_Manager
 {
     static class Program
     {

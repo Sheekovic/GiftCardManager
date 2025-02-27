@@ -102,22 +102,54 @@ namespace Card_Manager
             lblStatus.Text = "Downloading update...";
 
             string tempFilePath = Path.Combine(Path.GetTempPath(), "update.zip");
+            string extractPath = Path.Combine(Path.GetTempPath(), "UpdateTemp");
+            string mainAppPath = Directory.GetCurrentDirectory();
 
-            using HttpClient client = new();
-            var data = await client.GetByteArrayAsync(downloadUrl);
-            await File.WriteAllBytesAsync(tempFilePath, data);
+            try
+            {
+                // Download the update
+                using HttpClient client = new();
+                var data = await client.GetByteArrayAsync(downloadUrl);
+                await File.WriteAllBytesAsync(tempFilePath, data);
 
-            lblStatus.Text = "Extracting update...";
-            await Task.Delay(1000);
+                lblStatus.Text = "Extracting update...";
+                await Task.Delay(1000);
 
-            string extractPath = Path.Combine(Directory.GetCurrentDirectory(), "Update");
-            ZipFile.ExtractToDirectory(tempFilePath, extractPath, true);
+                // Ensure temp folder is empty
+                if (Directory.Exists(extractPath))
+                    Directory.Delete(extractPath, true);
 
-            lblStatus.Text = "Update installed. Restarting...";
-            await Task.Delay(2000);
+                Directory.CreateDirectory(extractPath);
+                ZipFile.ExtractToDirectory(tempFilePath, extractPath, true);
 
-            Process.Start(Path.Combine(extractPath, "GiftCardManager.exe")); // Change to your EXE name
-            Environment.Exit(0);
+                lblStatus.Text = "Applying update...";
+                await Task.Delay(1000);
+
+                // Start a process to replace files and restart the app
+                string updaterScript = Path.Combine(extractPath, "updater.bat");
+                File.WriteAllText(updaterScript, $@"
+        @echo off
+        timeout /t 2 /nobreak >nul
+        xcopy /s /y ""{extractPath}\*"" ""{mainAppPath}\""
+        rd /s /q ""{extractPath}""
+        del ""{tempFilePath}""
+        start """" ""{Path.Combine(mainAppPath, "GCM.exe")}""
+        exit
+        ");
+
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = updaterScript,
+                    UseShellExecute = true,
+                    CreateNoWindow = true
+                });
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = "Update failed: " + ex.Message;
+            }
         }
 
         private void LaunchMainApp()
