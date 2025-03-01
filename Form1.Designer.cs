@@ -670,6 +670,7 @@
             ButtonClearAll.AutoSize = true;
             ButtonClearAll.BackColor = System.Drawing.Color.Black;
             ButtonClearAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            ButtonClearAll.Dock = System.Windows.Forms.DockStyle.Fill;
             ButtonClearAll.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             ButtonClearAll.Location = new System.Drawing.Point(373, 530);
             ButtonClearAll.Margin = new System.Windows.Forms.Padding(4);

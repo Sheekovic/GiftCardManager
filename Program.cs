@@ -28,8 +28,14 @@ namespace Card_Manager
                 return;
             }
 
-            // Start the application
-            Application.Run(new UpdateForm());
+            var updateForm = new UpdateForm();
+            Application.Run(updateForm); // Run the update form first
+
+            // Ensure the app continues running if updateForm closes normally
+            if (!updateForm.IsDisposed)
+            {
+                Application.Run(new GiftCardManager());
+            }
         }
 
         private static void OnApplicationExit(object sender, EventArgs e)
@@ -37,6 +43,7 @@ namespace Card_Manager
             // Ensures all processes, background tasks, and threads are terminated
             Process.GetCurrentProcess().Kill();
         }
+
 
         private static Assembly LoadFromLibsFolder(object sender, ResolveEventArgs args)
         {

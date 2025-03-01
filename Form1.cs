@@ -15,6 +15,7 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using OfficeOpenXml;
+using System.Diagnostics;
 
 
 
@@ -1819,6 +1820,21 @@ namespace Card_Manager
         {
             // Close the application
             Application.Exit();
+        }
+        #endregion
+
+        #region Make Sure App is closed
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            // Kill GCM.exe when the form is closed
+            foreach (var process in Process.GetProcessesByName("GCM"))
+            {
+                process.Kill();
+            }
+
+            Environment.Exit(0);
         }
         #endregion
     }

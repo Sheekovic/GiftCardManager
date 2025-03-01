@@ -12,7 +12,7 @@ namespace Card_Manager
     public partial class UpdateForm : Form
     {
         private const string GitHubApiUrl = "https://api.github.com/repos/Sheekovic/GiftCardManager/releases/latest";
-        private const string CurrentVersion = "v3.1.0"; // Your app version
+        private const string CurrentVersion = "v3.1.1"; // Your app version
         private string downloadUrl = "";
 
         public UpdateForm()
@@ -139,7 +139,8 @@ start """" ""{Path.Combine(appFolder, "GCM.exe")}""
 exit
                 ");
 
-                // Run the batch file and exit the app
+
+                // 🔥 Start the updater batch file
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = batchFilePath,
@@ -147,7 +148,8 @@ exit
                     CreateNoWindow = true
                 });
 
-                Application.Exit();
+                // 🔴 Ensure app fully terminates after launching updater
+                Environment.Exit(0);
             }
             catch (Exception ex)
             {
