@@ -87,7 +87,6 @@
             button4 = new System.Windows.Forms.Button();
             button9 = new System.Windows.Forms.Button();
             Button_1Dollar_4 = new System.Windows.Forms.Button();
-            Button_1Dollar_11 = new System.Windows.Forms.Button();
             Button_1Dollar_3 = new System.Windows.Forms.Button();
             Button_1Dollar_15 = new System.Windows.Forms.Button();
             Button_1Dollar_6 = new System.Windows.Forms.Button();
@@ -152,11 +151,11 @@
             button46 = new System.Windows.Forms.Button();
             button47 = new System.Windows.Forms.Button();
             button48 = new System.Windows.Forms.Button();
-            button49 = new System.Windows.Forms.Button();
+            Button_1Dollar_10 = new System.Windows.Forms.Button();
             BalanceInput10 = new System.Windows.Forms.TextBox();
             button50 = new System.Windows.Forms.Button();
             button51 = new System.Windows.Forms.Button();
-            button52 = new System.Windows.Forms.Button();
+            Timer3M_Button10 = new System.Windows.Forms.Button();
             GiftCardInput10 = new System.Windows.Forms.TextBox();
             CommentBox11 = new System.Windows.Forms.TextBox();
             button53 = new System.Windows.Forms.Button();
@@ -164,7 +163,7 @@
             button55 = new System.Windows.Forms.Button();
             button56 = new System.Windows.Forms.Button();
             button57 = new System.Windows.Forms.Button();
-            button58 = new System.Windows.Forms.Button();
+            Button_5Dollar_3 = new System.Windows.Forms.Button();
             BalanceInput11 = new System.Windows.Forms.TextBox();
             Done_11_Button = new System.Windows.Forms.Button();
             Timer15M_Button11 = new System.Windows.Forms.Button();
@@ -183,6 +182,9 @@
             lightBox1 = new System.Windows.Forms.PictureBox();
             tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             label1 = new System.Windows.Forms.Label();
+            button35 = new System.Windows.Forms.Button();
+            Button_1Dollar_11 = new System.Windows.Forms.Button();
+            button36 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)lightBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lightBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lightBox9).BeginInit();
@@ -668,12 +670,11 @@
             ButtonClearAll.AutoSize = true;
             ButtonClearAll.BackColor = System.Drawing.Color.Black;
             ButtonClearAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            ButtonClearAll.Dock = System.Windows.Forms.DockStyle.Fill;
             ButtonClearAll.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            ButtonClearAll.Location = new System.Drawing.Point(102, 530);
+            ButtonClearAll.Location = new System.Drawing.Point(373, 530);
             ButtonClearAll.Margin = new System.Windows.Forms.Padding(4);
             ButtonClearAll.Name = "ButtonClearAll";
-            ButtonClearAll.Size = new System.Drawing.Size(263, 31);
+            ButtonClearAll.Size = new System.Drawing.Size(75, 31);
             ButtonClearAll.TabIndex = 67;
             ButtonClearAll.Text = "Clear All";
             ButtonClearAll.UseVisualStyleBackColor = false;
@@ -1086,23 +1087,6 @@
             Button_1Dollar_4.Text = "1$";
             Button_1Dollar_4.UseVisualStyleBackColor = false;
             Button_1Dollar_4.Click += Button_1Dollar_4_Click;
-            // 
-            // Button_1Dollar_11
-            // 
-            Button_1Dollar_11.AutoSize = true;
-            Button_1Dollar_11.BackColor = System.Drawing.Color.Black;
-            Button_1Dollar_11.Cursor = System.Windows.Forms.Cursors.Hand;
-            Button_1Dollar_11.Dock = System.Windows.Forms.DockStyle.Fill;
-            Button_1Dollar_11.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            Button_1Dollar_11.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            Button_1Dollar_11.Location = new System.Drawing.Point(696, 125);
-            Button_1Dollar_11.Margin = new System.Windows.Forms.Padding(4);
-            Button_1Dollar_11.Name = "Button_1Dollar_11";
-            Button_1Dollar_11.Size = new System.Drawing.Size(52, 37);
-            Button_1Dollar_11.TabIndex = 93;
-            Button_1Dollar_11.Text = "5$";
-            Button_1Dollar_11.UseVisualStyleBackColor = false;
-            Button_1Dollar_11.Click += Button_5Dollar_3_Click;
             // 
             // Button_1Dollar_3
             // 
@@ -2145,22 +2129,22 @@
             button48.UseVisualStyleBackColor = false;
             button48.Click += button48_Click;
             // 
-            // button49
+            // Button_1Dollar_10
             // 
-            button49.AutoSize = true;
-            button49.BackColor = System.Drawing.Color.Black;
-            button49.Cursor = System.Windows.Forms.Cursors.Hand;
-            button49.Dock = System.Windows.Forms.DockStyle.Fill;
-            button49.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            button49.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button49.Location = new System.Drawing.Point(456, 440);
-            button49.Margin = new System.Windows.Forms.Padding(4);
-            button49.Name = "button49";
-            button49.Size = new System.Drawing.Size(52, 37);
-            button49.TabIndex = 167;
-            button49.Text = "1$";
-            button49.UseVisualStyleBackColor = false;
-            button49.Click += button49_Click;
+            Button_1Dollar_10.AutoSize = true;
+            Button_1Dollar_10.BackColor = System.Drawing.Color.Black;
+            Button_1Dollar_10.Cursor = System.Windows.Forms.Cursors.Hand;
+            Button_1Dollar_10.Dock = System.Windows.Forms.DockStyle.Fill;
+            Button_1Dollar_10.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            Button_1Dollar_10.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            Button_1Dollar_10.Location = new System.Drawing.Point(456, 440);
+            Button_1Dollar_10.Margin = new System.Windows.Forms.Padding(4);
+            Button_1Dollar_10.Name = "Button_1Dollar_10";
+            Button_1Dollar_10.Size = new System.Drawing.Size(52, 37);
+            Button_1Dollar_10.TabIndex = 167;
+            Button_1Dollar_10.Text = "1$";
+            Button_1Dollar_10.UseVisualStyleBackColor = false;
+            Button_1Dollar_10.Click += Button_1Dollar_10_Click;
             // 
             // BalanceInput10
             // 
@@ -2209,21 +2193,21 @@
             button51.UseVisualStyleBackColor = false;
             button51.Click += Timer15M_Button10_Click;
             // 
-            // button52
+            // Timer3M_Button10
             // 
-            button52.AutoSize = true;
-            button52.BackColor = System.Drawing.Color.Black;
-            button52.Cursor = System.Windows.Forms.Cursors.Hand;
-            button52.Dock = System.Windows.Forms.DockStyle.Fill;
-            button52.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button52.Location = new System.Drawing.Point(791, 440);
-            button52.Margin = new System.Windows.Forms.Padding(4);
-            button52.Name = "button52";
-            button52.Size = new System.Drawing.Size(96, 37);
-            button52.TabIndex = 163;
-            button52.Text = "3 minutes";
-            button52.UseVisualStyleBackColor = false;
-            button52.Click += Timer3M_Button10_Click;
+            Timer3M_Button10.AutoSize = true;
+            Timer3M_Button10.BackColor = System.Drawing.Color.Black;
+            Timer3M_Button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            Timer3M_Button10.Dock = System.Windows.Forms.DockStyle.Fill;
+            Timer3M_Button10.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            Timer3M_Button10.Location = new System.Drawing.Point(791, 440);
+            Timer3M_Button10.Margin = new System.Windows.Forms.Padding(4);
+            Timer3M_Button10.Name = "Timer3M_Button10";
+            Timer3M_Button10.Size = new System.Drawing.Size(96, 37);
+            Timer3M_Button10.TabIndex = 163;
+            Timer3M_Button10.Text = "3 minutes";
+            Timer3M_Button10.UseVisualStyleBackColor = false;
+            Timer3M_Button10.Click += Timer3M_Button10_Click;
             // 
             // GiftCardInput10
             // 
@@ -2339,22 +2323,22 @@
             button57.UseVisualStyleBackColor = false;
             button57.Click += button57_Click;
             // 
-            // button58
+            // Button_5Dollar_3
             // 
-            button58.AutoSize = true;
-            button58.BackColor = System.Drawing.Color.Black;
-            button58.Cursor = System.Windows.Forms.Cursors.Hand;
-            button58.Dock = System.Windows.Forms.DockStyle.Fill;
-            button58.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            button58.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button58.Location = new System.Drawing.Point(456, 485);
-            button58.Margin = new System.Windows.Forms.Padding(4);
-            button58.Name = "button58";
-            button58.Size = new System.Drawing.Size(52, 37);
-            button58.TabIndex = 180;
-            button58.Text = "1$";
-            button58.UseVisualStyleBackColor = false;
-            button58.Click += button58_Click;
+            Button_5Dollar_3.AutoSize = true;
+            Button_5Dollar_3.BackColor = System.Drawing.Color.Black;
+            Button_5Dollar_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            Button_5Dollar_3.Dock = System.Windows.Forms.DockStyle.Fill;
+            Button_5Dollar_3.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            Button_5Dollar_3.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            Button_5Dollar_3.Location = new System.Drawing.Point(696, 125);
+            Button_5Dollar_3.Margin = new System.Windows.Forms.Padding(4);
+            Button_5Dollar_3.Name = "Button_5Dollar_3";
+            Button_5Dollar_3.Size = new System.Drawing.Size(52, 37);
+            Button_5Dollar_3.TabIndex = 93;
+            Button_5Dollar_3.Text = "5$";
+            Button_5Dollar_3.UseVisualStyleBackColor = false;
+            Button_5Dollar_3.Click += Button_5Dollar_3_Click;
             // 
             // BalanceInput11
             // 
@@ -2649,7 +2633,7 @@
             tableLayoutPanel1.Controls.Add(Timer3M_Button8, 9, 8);
             tableLayoutPanel1.Controls.Add(Timer15M_Button11, 11, 11);
             tableLayoutPanel1.Controls.Add(Timer15M_Button9, 11, 9);
-            tableLayoutPanel1.Controls.Add(button52, 9, 10);
+            tableLayoutPanel1.Controls.Add(Timer3M_Button10, 9, 10);
             tableLayoutPanel1.Controls.Add(CommentBox11, 0, 11);
             tableLayoutPanel1.Controls.Add(lightBox11, 8, 11);
             tableLayoutPanel1.Controls.Add(Timer3M_Button9, 9, 9);
@@ -2670,7 +2654,6 @@
             tableLayoutPanel1.Controls.Add(label3, 10, 0);
             tableLayoutPanel1.Controls.Add(copy_5, 12, 5);
             tableLayoutPanel1.Controls.Add(Timer5M_Button3, 10, 3);
-            tableLayoutPanel1.Controls.Add(button58, 3, 11);
             tableLayoutPanel1.Controls.Add(Timer5M_Button2, 10, 2);
             tableLayoutPanel1.Controls.Add(copy_4, 12, 4);
             tableLayoutPanel1.Controls.Add(button46, 5, 10);
@@ -2712,7 +2695,7 @@
             tableLayoutPanel1.Controls.Add(Button_1Dollar_15, 7, 6);
             tableLayoutPanel1.Controls.Add(Timer15M_Button1, 11, 1);
             tableLayoutPanel1.Controls.Add(CommentBox8, 0, 8);
-            tableLayoutPanel1.Controls.Add(button49, 3, 10);
+            tableLayoutPanel1.Controls.Add(Button_1Dollar_10, 3, 10);
             tableLayoutPanel1.Controls.Add(CommentBox10, 0, 10);
             tableLayoutPanel1.Controls.Add(Timer3M_Button1, 9, 1);
             tableLayoutPanel1.Controls.Add(CommentBox9, 0, 9);
@@ -2720,7 +2703,6 @@
             tableLayoutPanel1.Controls.Add(button23, 7, 8);
             tableLayoutPanel1.Controls.Add(ButtonSave, 0, 12);
             tableLayoutPanel1.Controls.Add(BalanceInput10, 2, 10);
-            tableLayoutPanel1.Controls.Add(ButtonClearAll, 1, 12);
             tableLayoutPanel1.Controls.Add(button30, 6, 5);
             tableLayoutPanel1.Controls.Add(button27, 7, 9);
             tableLayoutPanel1.Controls.Add(GiftCardInput1, 1, 1);
@@ -2743,7 +2725,6 @@
             tableLayoutPanel1.Controls.Add(button16, 5, 7);
             tableLayoutPanel1.Controls.Add(button15, 5, 8);
             tableLayoutPanel1.Controls.Add(button14, 5, 9);
-            tableLayoutPanel1.Controls.Add(Button_1Dollar_11, 7, 3);
             tableLayoutPanel1.Controls.Add(GiftCardInput10, 1, 10);
             tableLayoutPanel1.Controls.Add(GiftCardInput6, 1, 6);
             tableLayoutPanel1.Controls.Add(GiftCardInput7, 1, 7);
@@ -2779,6 +2760,10 @@
             tableLayoutPanel1.Controls.Add(button12, 4, 2);
             tableLayoutPanel1.Controls.Add(BalanceInput3, 2, 3);
             tableLayoutPanel1.Controls.Add(label1, 12, 0);
+            tableLayoutPanel1.Controls.Add(button35, 7, 3);
+            tableLayoutPanel1.Controls.Add(Button_1Dollar_11, 3, 11);
+            tableLayoutPanel1.Controls.Add(ButtonClearAll, 2, 12);
+            tableLayoutPanel1.Controls.Add(button36, 1, 12);
             tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -2798,6 +2783,7 @@
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.55740738F));
             tableLayoutPanel1.Size = new System.Drawing.Size(1193, 565);
             tableLayoutPanel1.TabIndex = 188;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint_1;
             // 
             // label1
             // 
@@ -2810,6 +2796,47 @@
             label1.TabIndex = 188;
             label1.Text = "Finished";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button35
+            // 
+            button35.BackColor = System.Drawing.Color.Black;
+            button35.Dock = System.Windows.Forms.DockStyle.Fill;
+            button35.Location = new System.Drawing.Point(695, 124);
+            button35.Name = "button35";
+            button35.Size = new System.Drawing.Size(54, 39);
+            button35.TabIndex = 189;
+            button35.Text = "5$";
+            button35.UseVisualStyleBackColor = false;
+            button35.Click += button35_Click;
+            // 
+            // Button_1Dollar_11
+            // 
+            Button_1Dollar_11.AutoSize = true;
+            Button_1Dollar_11.BackColor = System.Drawing.Color.Black;
+            Button_1Dollar_11.Cursor = System.Windows.Forms.Cursors.Hand;
+            Button_1Dollar_11.Dock = System.Windows.Forms.DockStyle.Fill;
+            Button_1Dollar_11.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            Button_1Dollar_11.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            Button_1Dollar_11.Location = new System.Drawing.Point(456, 485);
+            Button_1Dollar_11.Margin = new System.Windows.Forms.Padding(4);
+            Button_1Dollar_11.Name = "Button_1Dollar_11";
+            Button_1Dollar_11.Size = new System.Drawing.Size(52, 37);
+            Button_1Dollar_11.TabIndex = 180;
+            Button_1Dollar_11.Text = "1$";
+            Button_1Dollar_11.UseVisualStyleBackColor = false;
+            Button_1Dollar_11.Click += Button_1Dollar_11_Click;
+            // 
+            // button36
+            // 
+            button36.BackColor = System.Drawing.Color.Black;
+            button36.Dock = System.Windows.Forms.DockStyle.Fill;
+            button36.Location = new System.Drawing.Point(101, 529);
+            button36.Name = "button36";
+            button36.Size = new System.Drawing.Size(265, 33);
+            button36.TabIndex = 190;
+            button36.Text = "Generate Report";
+            button36.UseVisualStyleBackColor = false;
+            button36.Click += button36_Click;
             // 
             // GiftCardManager
             // 
@@ -2900,7 +2927,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button Button_1Dollar_4;
-        private System.Windows.Forms.Button Button_1Dollar_11;
+        private System.Windows.Forms.Button Button_5Dollar_3;
         private System.Windows.Forms.Button Button_1Dollar_3;
         private System.Windows.Forms.Button Button_1Dollar_15;
         private System.Windows.Forms.Button Button_1Dollar_6;
@@ -2975,11 +3002,11 @@
         private System.Windows.Forms.Button button47;
         private System.Windows.Forms.PictureBox lightBox10;
         private System.Windows.Forms.Button button48;
-        private System.Windows.Forms.Button button49;
+        private System.Windows.Forms.Button Button_1Dollar_10;
         private System.Windows.Forms.TextBox BalanceInput10;
         private System.Windows.Forms.Button button50;
         private System.Windows.Forms.Button button51;
-        private System.Windows.Forms.Button button52;
+        private System.Windows.Forms.Button Timer3M_Button10;
         private System.Windows.Forms.TextBox GiftCardInput10;
         private System.Windows.Forms.TextBox CommentBox11;
         private System.Windows.Forms.Button button53;
@@ -2988,7 +3015,6 @@
         private System.Windows.Forms.Button button56;
         private System.Windows.Forms.PictureBox lightBox11;
         private System.Windows.Forms.Button button57;
-        private System.Windows.Forms.Button button58;
         private System.Windows.Forms.TextBox BalanceInput11;
         private System.Windows.Forms.Button Done_11_Button;
         private System.Windows.Forms.Button Timer15M_Button11;
@@ -2996,6 +3022,9 @@
         private System.Windows.Forms.TextBox GiftCardInput11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Button_1Dollar_11;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Button button36;
     }
 }
 

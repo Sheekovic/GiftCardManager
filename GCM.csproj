@@ -30,6 +30,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.6.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
+  <PropertyGroup>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+
+  <Target Name="MoveDllsToLibs" AfterTargets="Build">
+    <ItemGroup>
+		<LibsDlls Include="$(OutputPath)Debug\*.dll;$(OutputPath)Release\*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(LibsDlls)" DestinationFolder="$(OutputPath)Libs\" />
+    <Delete Files="@(LibsDlls)" />
+  </Target>
 </Project>
